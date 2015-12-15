@@ -13,9 +13,6 @@ class ListingsController < ApplicationController
 	end
 
 	def create
-		# @listing = Listing.create(img_url: params[:img_url], address: params[:address], neighborhood: params[:neighborhood], price: params[:price], description: params[:description], user_id: session[:user_id])
-		# redirect_to @listing
-
 		@listing = Listing.new(listing_params)
 
     if @listing.save
@@ -26,13 +23,22 @@ class ListingsController < ApplicationController
 	end
 
 	def edit
-		@listing = Listing.new
+		@listing = Listing.find(params[:id])
 	end
 
 	def update
+		@listing = Listing.find(params[:id])
+		if @listing.update(listing_params)
+			redirect_to @listing
+		else
+			render :edit
+		end
 	end
 
 	def destroy
+		@listing = Listing.find(params[:id])
+		@listing.destroy
+		redirect_to "/"
 	end
 	
 	private
