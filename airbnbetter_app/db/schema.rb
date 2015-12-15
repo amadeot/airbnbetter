@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215152527) do
+ActiveRecord::Schema.define(version: 20151215160703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "listing_id"
+    t.string  "status", default: "pending"
+  end
 
   create_table "listings", force: :cascade do |t|
     t.string  "img_url"
@@ -26,7 +32,11 @@ ActiveRecord::Schema.define(version: 20151215152527) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
+    t.string "username"
+    t.string "password_digest"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "location"
   end
 
 end
