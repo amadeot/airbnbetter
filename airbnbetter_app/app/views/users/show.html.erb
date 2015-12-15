@@ -1,1 +1,25 @@
-<h1><%=@user.first_name %> <%= @user.last_name %>'s Profile</h1>
+<div id="profile-container">
+  <div id="profile-header">
+    <h1><%= @user.first_name %> <%= @user.last_name %>'s Profile</h1>
+  </div>
+  
+  <div id="profile-bio">
+  <% if @user.bio.length > 0 do %>
+    <p><%= @user.bio %></p>
+  <% else %>
+    <%= link_to "Add a Bio", edit_user_path(@user) %>
+  <% end %>
+  </div>
+  
+  <div id="profile-sidebar">
+  <% if @user.avatar.length > 0 do %>
+    <img src="<%= @user.avatar %>">
+  <% else %>
+    <%= link_to "Add an Avatar", edit_user_path(@user) %>
+  <% end %>
+  </div>
+  
+  <div id="profile-footer">
+    <p>Delete This Account</p>
+  </div>
+</div>
