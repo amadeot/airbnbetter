@@ -3,11 +3,25 @@ body {
 	background-color: #A8C8CC;
 	background-image: url("http://www.hercampus.com/sites/default/files/2014/11/25/sunset-plane.png");
 	background-attachment: fixed;
+  margin: 0;
 }
 
-#hello {
-	text-align: center;
-	font-size: 30px;
+.navigation-bar {
+  background-color: rgba(13,13,13,0.5);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+.right {
+  display: inline-block;
+}
+
+.navigation-bar a {
+  color: white;
+  align-self: center;
 }
 
 #edit-header {
