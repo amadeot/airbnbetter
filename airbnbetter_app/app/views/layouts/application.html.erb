@@ -13,6 +13,7 @@
     <p><%= current_user.username %></p>   
   <% else %>
     <p><%= link_to "Log in", login_path %></p>
+    <p><%= link_to "Sign up", signup_path %></p>
   <% end %>
   <%= yield %>
 </body>
