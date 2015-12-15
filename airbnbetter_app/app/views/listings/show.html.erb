@@ -1,6 +1,6 @@
-<h1>Check out This Listing</h1>
+<h1 id="listings-show-header">Check out This Listing</h1>
 
-<h2> <%= @listing.neighborhood %> </h2>
+<h2 id="show-hood"> <%= @listing.neighborhood %> </h2>
 
 
 
@@ -25,4 +25,8 @@
 
 
 
-<h5> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h5>
+<h5 id="show-listing-edit-link"> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h5>
+
+
+<%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+
