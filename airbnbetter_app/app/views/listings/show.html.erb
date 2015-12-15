@@ -1,5 +1,28 @@
-<h1>Check out Listing</h1>
+<h1>Check out This Listing</h1>
 
 <h2> <%= @listing.neighborhood %> </h2>
 
-<h4> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h4>
+
+
+<div id="show">
+	<div id="show-image">
+		<img src="<%= @listing.img_url %>">
+	</div>
+	<div class="show-left">
+		<div id="show-description">
+			<p> <%=  @listing.description %> </p>
+		</div>
+		<div id="show-price">
+			<h3> $<%= @listing.price %>/night </h3>
+		</div>
+		<div id="show-address">
+			<h3> <%= @listing.address %> </h3>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<h5> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h5>
