@@ -1,0 +1,6 @@
+<p>test</p>
+<%= form_for @booking do |f| %>
+  <%= f.hidden_field(:user_id, value: current_user.id) %>
+  <%= f.hidden_field(:listing_id, value: params[:id]) %>
+  <%= f.submit %>
+<% end %>
