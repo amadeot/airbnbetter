@@ -1,0 +1,9 @@
+<h1>test</h1>
+<% @listings.each do |listing| %>
+  <p id="listing-image"> <%= listing.img_url %> </p>
+  <ul>
+    <li> Neighborhood: <%= listing.neighborhood %> </li>
+    <li> Price: <%= listing.price %> </li>
+    <li> Description: <%= listing.description %> </li>
+  </ul>
+<% end %>
