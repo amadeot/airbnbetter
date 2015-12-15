@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 	def destroy
 		@user = User.find(params[:id])
 		if @user.destroy
+			reset_session
 			redirect_to "/"
 		else
 			render :edit
