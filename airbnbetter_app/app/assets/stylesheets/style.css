@@ -1,5 +1,6 @@
 body {
 	background-color: #7F757A;
+  font-family: helvetica;
 }
 
 #home-link {
@@ -55,8 +56,9 @@ body {
 }
 
 #profile-container {
-  width:960px;
-  margin:20px auto;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
 }
 
 #profile-header {
@@ -69,7 +71,7 @@ body {
 
 #profile-bio {
   float:left;
-  width:610px;
+  width:60%;
   text-align:center;
   height:100px;
   background:#ccc;
@@ -78,10 +80,14 @@ body {
 
 #profile-sidebar {
   float:right;
-  width:330px;
+  width: 30%;
+  margin: 20px;
+  padding: 10px;
+  color: black;
   text-align:center;
   height:100px;
-  background:#eee;
+  background: white;
+  border: 1px black;
   padding:150px 5px
 }
 
@@ -89,7 +95,7 @@ body {
   clear:both;
   text-align:center;
   background: #555;
-  color: red;
+  color: white;
   font-weight: bold;
   height:50px;
   padding:5px
