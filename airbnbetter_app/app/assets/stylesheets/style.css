@@ -1,6 +1,7 @@
 body {
 	background-color: #A8C8CC;
-	background-image: src("http://www.hercampus.com/sites/default/files/2014/11/25/sunset-plane.png")
+	background-image: url("http://www.hercampus.com/sites/default/files/2014/11/25/sunset-plane.png");
+	background-attachment: fixed;
 }
 
 #hello {
@@ -25,6 +26,7 @@ body {
 }
 
 #show {
+	color:white;
 	margin: 0 auto;
 	width:70%;
 	height: 70%;
@@ -76,6 +78,7 @@ body {
 }
 
 .welcome-container {
+	color:white;
 	margin: 0 auto;
 	width:70%;
 	height: 70%;
