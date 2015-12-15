@@ -4,22 +4,24 @@
   </div>
   
   <div id="profile-bio">
-  <% if @user.bio.length > 0 do %>
+  <% if @user.bio %>
     <p><%= @user.bio %></p>
   <% else %>
-    <%= link_to "Add a Bio", edit_user_path(@user) %>
+    <a href="/users/<%= @user.id %>/edit">Edit profile to add a Bio</a>
   <% end %>
   </div>
   
   <div id="profile-sidebar">
-  <% if @user.avatar.length > 0 do %>
-    <img src="<%= @user.avatar %>">
+  <% if @user.img_url %>
+    <img src="<%= @user.img_url %>">
   <% else %>
-    <%= link_to "Add an Avatar", edit_user_path(@user) %>
+    <a href="/users/<%= @user.id %>/edit">Edit profile to add an Avatar</a>
   <% end %>
   </div>
   
+  <a href="/users/<%= @user.id %>/edit">Edit Profile</a>
+
   <div id="profile-footer">
-    <p>Delete This Account</p>
+    <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 </div>
