@@ -1,9 +1,12 @@
 <h1>test</h1>
 <% @listings.each do |listing| %>
-  <p id="listing-image"> <%= listing.img_url %> </p>
+  <img src="<%= listing.img_url %>" id="listing-image">
   <ul>
-    <li> Neighborhood: <%= listing.neighborhood %> </li>
+    <li> <a href="/listings/<%=listing.id%>"> Neighborhood: <%= listing.neighborhood %> </a> </li>
     <li> Price: <%= listing.price %> </li>
     <li> Description: <%= listing.description %> </li>
   </ul>
 <% end %>
+
+
+<h4> <a href="/listings/new">Create a New Listing</a> </h4>

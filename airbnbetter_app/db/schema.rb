@@ -19,14 +19,13 @@ ActiveRecord::Schema.define(version: 20151215160703) do
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
     t.integer "listing_id"
-    t.string  "status", default: "pending"
+    t.string  "status",     default: "pending"
   end
 
   create_table "listings", force: :cascade do |t|
     t.string  "img_url"
     t.string  "address"
     t.string  "neighborhood"
-    t.integer "price"
     t.text    "description"
     t.integer "user_id"
   end
