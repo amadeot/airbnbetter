@@ -1,0 +1,27 @@
+<div id="profile-container">
+  <div id="profile-header">
+    <h1><%= @user.first_name %> <%= @user.last_name %>'s Profile</h1>
+  </div>
+  
+  <div id="profile-bio">
+  <% if @user.bio %>
+    <p><%= @user.bio %></p>
+  <% else %>
+    <a href="/users/<%= @user.id %>/edit">Edit profile to add a Bio</a>
+  <% end %>
+  </div>
+  
+  <div id="profile-sidebar">
+  <% if @user.img_url %>
+    <img src="<%= @user.img_url %>">
+  <% else %>
+    <a href="/users/<%= @user.id %>/edit">Edit profile to add an Avatar</a>
+  <% end %>
+  </div>
+  
+  <a href="/users/<%= @user.id %>/edit">Edit Profile</a>
+
+  <div id="profile-footer">
+    <%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>

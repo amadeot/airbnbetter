@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-	def index
-	end
-
 	def show
 		@user = User.find(params[:id])
 	end
@@ -22,12 +19,26 @@ class UsersController < ApplicationController
 	end
 
 	def edit
+		@user = User.find(params[:id])
 	end
 
 	def update
+		@user = User.find(params[:id])
+		if @user.update(user_params)
+			redirect_to "/"
+		else
+			render :edit
+		end
 	end
 
 	def destroy
+		@user = User.find(params[:id])
+		if @user.destroy
+			reset_session
+			redirect_to "/"
+		else
+			render :edit
+		end
 	end
 
 	private
