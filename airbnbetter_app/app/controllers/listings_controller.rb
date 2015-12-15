@@ -1,4 +1,4 @@
-class ListingsController < ApplicationController::Base
+class ListingsController < ApplicationController
 
 	def index
 	end
