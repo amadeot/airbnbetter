@@ -21,9 +21,11 @@
 	</div>
 </div>
 
-<%if @listing.user_id == current_user.id %>
-	<h5 id="show-listing-edit-link"> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h5>
-
-
-	<%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% if current_user %>
+	<%if @listing.user_id == current_user.id %>
+		<h5 id="show-listing-edit-link"> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h5>
+		<%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%else%>
+		<a href="/listings/<%=@listing.id%>/bookings/new">New Booking</a>
+	<% end %>
 <% end %>
