@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 resources :listings
+resources :users
 
 root "listings#index"
 
@@ -8,12 +9,8 @@ get '/login' =>  'sessions#new'
 post '/login' => 'sessions#create'
 delete '/logout' => 'sessions#destroy'
 
-get '/users/:id' => 'users#show'
 get '/signup' => 'users#new'
-post '/users' => 'users#create'
-get '/users/:id/edit' => 'users#edit'
-patch '/users/:id' => 'users#update'
-delete '/users/:id' => 'users#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
