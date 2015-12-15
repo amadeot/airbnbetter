@@ -1,3 +1,11 @@
+# AirBnBetter
+
+## Description
+
+## ERD
+
+<img src="http://i.imgur.com/jkLMYnp.png" alt="This is where an ERD should be!" width="500px"/>
+
 == README
 
 This README would normally document whatever steps are necessary to get the
