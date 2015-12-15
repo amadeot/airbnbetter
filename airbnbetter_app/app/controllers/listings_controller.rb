@@ -13,8 +13,16 @@ class ListingsController < ApplicationController
 	end
 
 	def create
-		@listing = Listing.create(img_url: params[:img_url], address: params[:address], neighborhood: params[:neighborhood], price: params[:price], description: params[:description], user_id: session[:user_id])
-		redirect_to @listing
+		# @listing = Listing.create(img_url: params[:img_url], address: params[:address], neighborhood: params[:neighborhood], price: params[:price], description: params[:description], user_id: session[:user_id])
+		# redirect_to @listing
+
+		@listing = Listing.new(listing_params)
+
+    if @listing.save
+      redirect_to @listing, notice: 'Listing was successfully created.'
+    else
+      render :new
+    end
 	end
 
 	def edit
@@ -27,6 +35,10 @@ class ListingsController < ApplicationController
 	def destroy
 	end
 	
+	private
+	def listing_params
+		params.require(:listing).permit(:address, :img_url, :neighborhood, :price, :description, :user_id)
+	end
 end
 
 
