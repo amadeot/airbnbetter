@@ -26,3 +26,7 @@
 
 
 <h5 id="show-listing-edit-link"> <a href="/listings/<%= @listing.id %>/edit">Edit this Listing</a> </h5>
+
+
+<%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+

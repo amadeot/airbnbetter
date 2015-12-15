@@ -2,7 +2,7 @@
 
 ## Description
 
-AirBnBetter is a full-stack app ~~stolen from~~ _loosely based on_ the functionality of [AirBnb](https://www.airbnb.com/) — where millions of hosts and travelers list their space and book unique accommodations anywhere in the world.
+AirBnBetter is a full-stack app ~~stolen from~~ _loosely based on_ the functionality of [airbnb](https://www.airbnb.com/) — where millions of hosts and travelers list their space and book unique accommodations anywhere in the world.
 
 ## User Stories
 A user should be able to:
@@ -19,7 +19,7 @@ A user should be able to:
 * View upcoming bookings and past bookings
 * View the current weather at any listing location
 
-## List of technologies
+## List of Technologies
 * Rails 4
 * jQuery
 * HTML
