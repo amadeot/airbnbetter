@@ -1,4 +1,5 @@
 body {
+
 	background-color: #A8C8CC;
 	background-image: url("http://www.hercampus.com/sites/default/files/2014/11/25/sunset-plane.png");
 	background-attachment: fixed;
@@ -11,6 +12,9 @@ body {
 
 #edit-header {
 	text-align: center;
+	background-color: #7F757A;
+  	font-family: helvetica;
+
 }
 
 #home-link {
@@ -86,3 +90,50 @@ body {
 	border-radius: 5px;
 	
 }
+
+#profile-container {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+#profile-header {
+  text-align:center;
+  background: #777;
+  color:#fff;
+  height:50px;
+  padding:5px
+}
+
+#profile-bio {
+  float:left;
+  width:60%;
+  text-align:center;
+  height:100px;
+  background:#ccc;
+  padding:150px 5px
+}
+
+#profile-sidebar {
+  float:right;
+  width: 30%;
+  margin: 20px;
+  padding: 10px;
+  color: black;
+  text-align:center;
+  height:100px;
+  background: white;
+  border: 1px black;
+  padding:150px 5px
+}
+
+#profile-footer {
+  clear:both;
+  text-align:center;
+  background: #555;
+  color: white;
+  font-weight: bold;
+  height:50px;
+  padding:5px
+}
+
