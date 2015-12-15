@@ -10,12 +10,8 @@ get '/login' =>  'sessions#new'
 post '/login' => 'sessions#create'
 delete '/logout' => 'sessions#destroy'
 
-get '/users/:id' => 'users#show'
 get '/signup' => 'users#new'
-post '/users' => 'users#create'
-get '/users/:id/edit' => 'users#edit'
-patch '/users/:id' => 'users#update'
-delete '/users/:id' => 'users#destroy'
+
 
 shallow do
   resources :listings do

@@ -1,9 +1,15 @@
 <%= form_for @user do |f| %>
-  <%= f.text_field :username, :placeholder => "Username"%>
-  <%= f.password_field :password, :placeholder => "Password"%>
-  <%= f.password_field :password_confirmation, :placeholder => "Confirm Password"%>
   <%= f.text_field :first_name, :placeholder => "First Name" %>
   <%= f.text_field :last_name, :placeholder => "Last Name"%>
+  <%= f.text_field :username, :placeholder => "Username"%>
   <%= f.text_field :location, :placeholder => "Location" %>
-  <%= f.submit "Create User" %>
+  <% if !@user.id %>
+    <%= f.password_field :password, :placeholder => "Password"%>
+    <%= f.password_field :password_confirmation, :placeholder => "Confirm Password"%>
+    <%= f.submit "Create User" %>
+  <% else %>
+    <%= f.text_field :bio, :placeholder => "Short Bio*" %>
+    <%= f.text_field :location, :placeholder => "Avatar*" %>  
+    <%= f.submit "Update User" %>
+  <% end %>
 <% end %>
