@@ -1,12 +1,22 @@
-<h1>test</h1>
 <% @listings.each do |listing| %>
-  <img src="<%= listing.img_url %>" id="listing-image" alt="No Image">
-  <ul>
-    <li> <a href="/listings/<%=listing.id%>"> Neighborhood: <%= listing.neighborhood %> </a> </li>
-    <li> Price: <%= listing.price %> </li>
-    <li> Description: <%= listing.description %> </li>
-  </ul>
+
+<div class="welcome-container">
+	<div id="show-image">
+  		<a href="/listings/<%=listing.id%>"><img src="<%= listing.img_url %>" alt="No Image"></a>
+  	</div>
+  	<div class="show-left">
+  		<div id="show-description">
+  			<p> <%=  listing.description %> </p>
+  		</div>
+  		<div id="show-address">
+  			<h3> <%= listing.neighborhood %> </h3>
+  		</div>
+  		<div id="show-price">
+  			<h3>$<%= listing.price %> </h3>
+  		</div>
+  	</div>
+</div>
 <% end %>
 
 
-<h4> <a href="/listings/new">Create a New Listing</a> </h4>
+<h4 id="create-listing"> <a href="/listings/new">Create a New Listing</a> </h4>

@@ -12,7 +12,9 @@
   <a id="home-link" href="/">Home</a>
   <% if current_user %>
     <p><%= link_to "Log out", logout_path, method: "delete" %></p> 
-    <a href="/users/<%= current_user.id%>"><%= current_user.username %></a>   
+
+    <h4 id="hello"> Hello, <%= current_user.username %> </h4>   
+<!-- href="/users/<%= current_user.id%> -->
   <% else %>
     <p><%= link_to "Log in", login_path %></p>
     <p><%= link_to "Sign up", signup_path %></p>
