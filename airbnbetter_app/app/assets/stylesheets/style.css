@@ -105,6 +105,10 @@ body {
 	border-radius: 50px;
 }
 
+#create-listing a {
+  color:white;
+}
+
 .welcome-container {
 	color:white;
 	margin: 0 auto;
