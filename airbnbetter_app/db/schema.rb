@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20151215160703) do
     t.string  "img_url"
     t.string  "address"
     t.string  "neighborhood"
-    t.integer "price"
     t.text    "description"
     t.integer "user_id"
   end
