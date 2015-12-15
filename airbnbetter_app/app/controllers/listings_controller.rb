@@ -5,12 +5,20 @@ class ListingsController < ApplicationController
 	end
 
 	def show
+		@listing = Listing.find(params[:id])
 	end
 
 	def new
+		@listing = Listing.new
 	end
 
 	def create
+		@listing = Listing.create(img_url: params[:img_url], address: params[:address], neighborhood: params[:neighborhood], price: params[:price], description: params[:description], user_id: session[:user_id])
+		redirect_to @listing
+	end
+
+	def edit
+		@listing = Listing.new
 	end
 
 	def update
