@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 resources :listings
+resources :users
+resources :bookings
 
 root "listings#index"
 
