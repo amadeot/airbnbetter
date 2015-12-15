@@ -30,6 +30,13 @@ class ListingsController < ApplicationController
 	end
 
 	def update
+		@listing Listing.update(listing_params)
+
+		if @listing.save
+			redirect_to @listing
+		else
+			render :new
+		end
 	end
 
 	def destroy
