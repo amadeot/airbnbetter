@@ -9,7 +9,11 @@
 	<%= f.text_field :img_url %>
 	<%= f.label :description %>
 	<%= f.text_area(:description, size: '50x10') %>
+<<<<<<< HEAD
 	<%= hidden_field_tag(:user_id, current_user.id)%>
+=======
+	<%= f.hidden_field(:user_id, value: current_user.id)%>
+>>>>>>> 641e2858d1879d75e2341c1a96f362eadc079d9f
 	<%= f.submit %>
 
 <% end %>
