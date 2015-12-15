@@ -6,7 +6,7 @@ root "listings#index"
 
 get '/login' =>  'sessions#new'
 post '/login' => 'sessions#create'
-delete '/login' => 'sessions#destroy'
+delete '/logout' => 'sessions#destroy'
 
 get '/signup' => 'users#new'
 post '/users' => 'users#create'
