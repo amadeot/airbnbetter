@@ -3,21 +3,26 @@ body {
 	background-color: #A8C8CC;
 	background-image: url("http://www.articlesdiscussion.com/wp-content/uploads/2015/07/taj-mahal2.jpg");
 	background-attachment: fixed;
-	font-family: helvetica;
+  font-family: helvetica;
+  margin: 0;
 }
 
-#hello {
-	color: white;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 25px;
-	height: 50px;
-	width: 200px;
-	background-color: rgba(15,15,15,.6);
-	margin-bottom: 25px;
-	border-radius: 50px;
+.navigation-bar {
+  background-color: rgba(13,13,13,0.5);
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 15px;
+}
 
-	
+.right {
+  display: inline-block;
+}
+
+.navigation-bar a {
+  color: white;
+  align-self: center;
 }
 
 #edit-header {

@@ -9,16 +9,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <a id="home-link" href="/">Home</a>
-  <% if current_user %>
-    <p><%= link_to "Log out", logout_path, method: "delete" %></p> 
-    <div id="hello">
-      <h4 id="hello"> Hello, <a href="/users/<%= current_user.id%>"> <%= current_user.username %> </a> </h4>
-    </div>
-  <% else %>
-    <p><%= link_to "Log in", login_path %></p>
-    <p><%= link_to "Sign up", signup_path %></p>
-  <% end %>
+  <div class="navigation-bar">
+    <a id="home-link" href="/">Home</a>
+    <div class="right">
+      <% if current_user %>
+        <p class="right"><%= link_to "Log out", logout_path, method: "delete" %></p> 
+
+        <a class="right" href="/users/<%= current_user.id%>" id="hello"> Hello, <%= current_user.username %> </a>   
+
+      <% else %>
+        <p class="right"><%= link_to "Log in", login_path %></p>
+        <p class="right"><%= link_to "Sign up", signup_path %></p>
+      <% end %>
+    </div> <!-- right -->
+  </div> <!-- navigation-bar -->
   <%= yield %>
 </body>
 </html>
