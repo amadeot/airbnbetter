@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <a href="/">Home</a>
+  <a id="home-link" href="/">Home</a>
   <% if current_user %>
     <p><%= link_to "Log out", logout_path, method: "delete" %></p> 
     <p><%= current_user.username %></p>   
